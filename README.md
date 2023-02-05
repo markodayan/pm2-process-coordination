@@ -19,3 +19,5 @@ Example of spinning up a service (by argument flag):
 # the code within the index file will initialise the foo service
 npm run debug src/index.ts foo
 ```
+
+> At a later stage, all services will be set up as PM2 services that have the same entry point (src/index.ts) but different arguments to trigger the service of choice.
