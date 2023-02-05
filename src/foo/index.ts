@@ -13,6 +13,10 @@ function run() {
   app.listen(PORT, () => {
     console.log(`[${service_name}] Server running on port ${PORT}`);
   });
+
+  process.on('exit', (code) => {
+    console.log(`[${service_name}] About to exit with code: ${code}`);
+  });
 }
 
 export { run };
