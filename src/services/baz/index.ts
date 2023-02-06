@@ -8,10 +8,11 @@ function run() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
 
+  const HOSTNAME = 'localhost';
   const PORT = 3002;
 
-  app.listen(PORT, () => {
-    console.log(`[${service_name}] Server running on port ${PORT}`);
+  app.listen(PORT, HOSTNAME, () => {
+    console.log(`[${service_name}] Server running on port http://${HOSTNAME}:${PORT}`);
   });
 
   process.on('exit', (code) => {
